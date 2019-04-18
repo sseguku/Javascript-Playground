@@ -1,0 +1,46 @@
+<script>
+const forecastL = {
+    today : {min : 83, max: 22},
+    trrw : {min : 33.3, max: 243}
+};
+
+function getMaxTrrw(forecast){
+    //"use strict";
+
+    const {trrw : { max : maxForTrrw}} = forecast;
+
+    return maxForTrrw;
+}
+function getMinToday(forecast){
+    return forecast.today.min
+}
+
+console.log(getMaxTrrw(forecastL))
+console.log(getMinToday(forecastL));
+
+//use destructing assignment to assign variable from arrays
+
+const [x, y, , , z] = [1,2,3,4,5,6];
+
+console.log(x,y,z);
+
+// const [, , , ...arr] = list 
+//skips three array objects and then assigns the rest of the arr to the list
+
+const stats = {
+
+    max : 754,
+    median: 34.3,
+    mode: 23,
+    min: -2,
+    average : 334.32
+};
+
+const half = (function(){
+    return function half({max, min}){
+        return (max + min)/2;
+    };
+})();
+
+console.log(half(stats));
+</script>

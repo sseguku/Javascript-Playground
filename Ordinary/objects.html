@@ -1,0 +1,47 @@
+<script>
+
+    function myCity(){
+        return "Kigali";
+    }
+
+    function cities(val){
+
+        var theMap = {
+            "Uganda" : "Kampala",
+            "Rwanda" : myCity(),
+            "Kenya" : "Nairobi",
+            "South Sudan" : "Juba"
+        };
+
+        return theMap[val];
+
+    }
+
+    // hasOwnProperty - checks if object has property
+    console.log(cities("Rwanda"));
+
+    var myPlants = [
+        {
+            type: "flowers",
+            list: [
+                "rose",
+                "tulip",
+                "dandelion"
+            ]
+        },
+        {
+            type: "trees",
+            list: [
+                "fir",
+                "pine",
+                "birch"
+            ]
+
+        }
+    ];
+
+    var secondTree = myPlants[1].type
+
+    console.log(secondTree);
+
+</script>

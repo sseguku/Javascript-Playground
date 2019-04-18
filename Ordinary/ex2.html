@@ -1,0 +1,43 @@
+<script>
+
+    //functions
+    function first(a,b){
+        console.log("Hello, Kisa");
+        console.log(a-b);
+    }
+    first(10,3);
+    //Global refers to visibility of variables
+    //possible to assign variable without keyword
+
+    var g = 10;
+    function fun1(){
+        //if you do not put a variable type, the type automatically becomes a global
+        oops = 5;
+    }
+
+    function fun2(){
+        var output = "";
+
+        if(typeof g != "undefined"){
+            output += "g: " + g;
+        }
+        
+        if(typeof oops != "undefined"){
+            output += "\nopps: " + oops;
+        }
+        console.log(output);
+    }
+    fun1();
+    fun2();
+
+    function nextInLine(arr, item){
+        arr.push(item);
+        return arr.shift();
+    }
+
+    var a = [1,2,3,4,5]
+    console.log("Before: " + JSON.stringify(a));
+    console.log(nextInLine(a, 6));
+    console.log("After: " + JSON.stringify(a));
+
+</script>

@@ -1,0 +1,23 @@
+<script>
+// condtion ? statement-if-true : statement-if-false;
+
+function checkEqual(a,b){
+   return a === b ? true : false;
+}
+
+console.log(checkEqual(1,2));
+
+//write a function that returns negative, positive or zero when a number is entered in it
+function checkSign(num){
+
+   //condition ? true : false
+   return num < 0 ? "negative" : num> 0 ? "positive" : "zero";
+
+}
+
+console.log("-3 is - " + checkSign(-3));
+
+console.log("23 is - " + checkSign(23));
+
+console.log("0 is - " + checkSign(0));
+</script>

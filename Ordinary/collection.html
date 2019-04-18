@@ -1,0 +1,47 @@
+<script>
+
+    var collection = {
+        "2548" : {
+            "album" : "Slippery When Wet",
+            "artist" : "Bon Jovi",
+            "tracks" : [
+                "Let it Rock",
+                "You Give Love a Bad Name"
+            ]
+            
+        },
+        "2468" : {
+            "album" : "1999",
+            "artist" : "Prince",
+            "tracks" : [
+                "1999",
+                "Little Red Corvette"
+                
+            ]},
+        "1235" : {
+            "album": "",
+            "artist":"Rober Palmer",
+            "tracks":[]
+        },
+        "5439" : {
+            "album":"ABBA Gold"
+            
+        }
+    };
+
+    //keep a copy
+    var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+    function updateRecords(id, prop, value){
+        if(value === "tracks")
+        collection[id][prop].push(value);
+        else
+        collection[id][prop] = value;
+        
+        return collection;
+    }
+
+    updateRecords("1235", "tracks", "See Me");
+
+    console.log(JSON.parse(JSON.stringify(collection)));
+</script>

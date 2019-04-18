@@ -1,0 +1,40 @@
+<script>
+var contacts = [
+    {
+        "firstname" : "Jjingo",
+        "lastname" : "Kisakye",
+        "number" : "0704520128",
+        "likes" : ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstname" : "Harry",
+        "lastname" : "Potter",
+        "number" : "3434234234",
+        "likes" : ["Magic", "Hagrid", "Hogwarts"]
+    },
+    {
+        "firstname" : "Sherlock",
+        "lastname" : "Holmes",
+        "number" : "unknown",
+        "likes" : ["Singing", "Intriguing Cases"]
+    }
+];
+
+//name, prop - pass in name and it returns the value of the property
+
+function lookUpProfile(name, prop){
+
+    for (var i = 0; i<contacts.length-1; i++){
+        if(contacts[i]["firstname"] == name){
+            return contacts[i][prop] //|| "not found" ;
+        } 
+        else return "Contact not found"
+
+    }
+
+}
+console.log(contacts.length)
+
+console.log(lookUpProfile("Jjingdo", "number"));
+
+</script>

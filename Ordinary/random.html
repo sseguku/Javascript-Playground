@@ -1,0 +1,26 @@
+<script>
+    var randomNumbers0and19 = Math.floor(Math.random() * 20);
+    console.log(randomNumbers0and19);
+
+    //Math.floor - is used to force generate integers
+
+    var x = 3/2 ;
+
+    console.log("Math.floor() of 3/2: " + Math.floor(x));
+    //Generating random numbers with a range
+
+    function randomRange(min, max){
+        return Math.floor(Math.random() * (max-min + 1) + min);
+    }
+
+    console.log("Min - Max random numbers of 40 and 100: " + randomRange(40,100));
+
+    //Converting string to int 
+
+    function convertToInteger(str){
+        return parseInt(str);
+
+    }
+    console.log(convertToInteger("56d"));
+</script>
+
