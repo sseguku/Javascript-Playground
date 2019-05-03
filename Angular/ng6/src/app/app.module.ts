@@ -6,17 +6,20 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UsersComponent } from './users/users.component';
 import { DetailsComponent } from './details/details.component';
-
+import { PostsComponent } from './posts/posts.component';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     UsersComponent,
-    DetailsComponent
+    DetailsComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
